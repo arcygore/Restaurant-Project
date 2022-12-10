@@ -6,6 +6,27 @@ export function contentLoad() {
 
     contentDiv.innerHTML = '';
 
+    const navBar = document.createElement('header');
+    navBar.classList.add("nav-bar");
+
+    const navBarList = document.createElement('ul')
+    navBarList.classList.add('nav-links');
+
+    const menuTab = document.createElement('li');
+    menuTab.classList.add('menu', 'link');
+    navBarList.appendChild(menuTab);
+
+    const homeTab = document.createElement('li');
+    homeTab.classList.add('home', 'link');
+    navBarList.appendChild(homeTab);
+
+    const aboutTab = document.createElement('li');
+    aboutTab.classList.add('about', 'link');
+    navBarList.appendChild(aboutTab);
+
+    navBar.appendChild(navBarList);
+    contentDiv.appendChild(navBar);
+
     const mainTitle = document.createElement('h1');
     mainTitle.innerText = "Welcome to Arcygore's Taco Shop!";
 
