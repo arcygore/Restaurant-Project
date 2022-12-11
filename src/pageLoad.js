@@ -1,10 +1,6 @@
-
-
-export function contentLoad() {
+function navBarLoad(content) { // This section of code is not working. I am still working the fix.
 
     const contentDiv = document.querySelector("#content");
-
-    contentDiv.innerHTML = '';
 
     const navBar = document.createElement('header');
     navBar.classList.add("nav-bar");
@@ -14,18 +10,29 @@ export function contentLoad() {
 
     const menuTab = document.createElement('li');
     menuTab.classList.add('menu', 'link');
-    navBarList.appendChild(menuTab);
 
     const homeTab = document.createElement('li');
     homeTab.classList.add('home', 'link');
-    navBarList.appendChild(homeTab);
 
     const aboutTab = document.createElement('li');
     aboutTab.classList.add('about', 'link');
-    navBarList.appendChild(aboutTab);
 
+    navBarList.appendChild(menuTab);
+    navBarList.appendChild(homeTab);
+    navBarList.appendChild(aboutTab);
     navBar.appendChild(navBarList);
-    contentDiv.appendChild(navBar);
+    content.appendChild(navBar);
+
+    return content;
+}
+
+export function contentLoad() {
+
+    const contentDiv = document.querySelector("#content");
+
+    contentDiv.innerHTML = '';
+
+    navBarLoad;
 
     const mainTitle = document.createElement('h1');
     mainTitle.innerText = "Welcome to Arcygore's Taco Shop!";
@@ -39,6 +46,7 @@ export function contentLoad() {
     contentDiv.appendChild(mainTitle);
     contentDiv.appendChild(mainImg);
     contentDiv.appendChild(mainText);
+
 };
 
 export function aboutLoad() {
@@ -46,6 +54,8 @@ export function aboutLoad() {
     const contentDiv = document.querySelector("#content");
 
     contentDiv.innerHTML = '';
+
+    navBarLoad();
 
     const mainTitle = document.createElement('h1');
     mainTitle.innerText = "About Us";
@@ -66,6 +76,8 @@ export function menuLoad() {
     const contentDiv = document.querySelector("#content");
 
     contentDiv.innerHTML = '';
+
+    navBarLoad();
 
     const mainTitle = document.createElement('h1');
     mainTitle.innerText = "Here is Arcygore's Menu!";
