@@ -7,8 +7,8 @@ body {
     height: 100vh;
 }
 
-header {
-
+p {
+    max-width: 80vw;
 }
 
 ul , li {
@@ -44,6 +44,8 @@ li {
 
 .food-img {
     max-width: 25vw;
+    height: 25vh;
+    object-fit: cover;
 }
 
 footer {
@@ -54,4 +56,6 @@ footer {
 
 img {
     width: 40vw;
+    height: 40vh;
+    object-fit: cover;
 }
