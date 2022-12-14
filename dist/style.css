@@ -7,11 +7,15 @@ body {
     height: 100vh;
 }
 
+header {
+
+}
+
 ul , li {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 5vw;
     padding: .5rem 5rem
 }
 
@@ -26,6 +30,20 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+}
+
+.menu-item {
+    max-width: 25vw;
+}
+
+.food-img {
+    max-width: 25vw;
 }
 
 footer {
